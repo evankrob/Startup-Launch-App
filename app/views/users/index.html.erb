@@ -1,0 +1,20 @@
+<style>#logo img{display: none;}</style>
+
+<p><%= link_to 'logout', :controller=>"authenticate", :action=>"logout" %></p>
+
+<table>
+<th width="500px">Email Address:</th>
+<th>#</th>
+<th></th>
+
+
+<% for user in @users %>
+  <tr>
+    <td><%= link_to user.email, user %></td>
+    <td class="referral_count"><%= user.referrals.count %></td>
+    <td><%= link_to 'X', user, :confirm => 'Are you sure you want to delete this signup?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+

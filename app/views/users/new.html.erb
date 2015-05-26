@@ -1,0 +1,26 @@
+ <div id="signup">
+
+
+
+
+<% form_for(@user) do |f| %>
+
+
+    
+    <% if f.error_messages.length<1 %>
+
+		<%= '<p class="smalltext">WhatsUpRaleigh is the premier app to find Raleigh Events, Specials, News & More. Launching soon for iPhone, Droid, BB & web. Learn more about why we are building WhatsUpRaleigh at blog.whatsupraleigh.com. </p> <p> <b>Enter your email address to sign up</b>. <span class="smalltext">The more friends you refer to sign up the sooner you will get an invite.</span></p>' %>
+    <% end %>
+
+    <div id="error"><%= f.error_messages %></div>
+
+    <%= f.text_field :email %>
+    <input name="referrer" type="hidden" value="<%= params[:id] %>" />
+    <%= f.submit "GO" %>
+    <div id= "clear"></div>
+
+    
+
+<% end %>
+
+		</div>

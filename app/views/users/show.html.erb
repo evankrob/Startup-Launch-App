@@ -1,0 +1,30 @@
+<style>#logo img{display: none;}</style>
+
+<p><%= link_to 'logout', :controller=>"authenticate", :action=>"logout" %></p>
+
+<h1>Email Address</h1>
+<p><%= @user.email %></p>
+
+<h1>Referral Code</h1>
+<p><%= @user.referral_code %></p>
+
+<h1>Referred Users (<%= @user.new_users.count %>)</h1>
+
+
+
+<table>
+<th width="500px">Email Address:</th>
+<th>#</th>
+
+
+<% for user in @user.new_users %>
+  <tr>
+    <td><%= link_to user.email, user %></td>
+    <td class="referral_count"><%= user.referrals.count %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+<p><%= link_to 'Back', users_path %></p>

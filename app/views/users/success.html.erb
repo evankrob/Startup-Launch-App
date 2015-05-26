@@ -1,0 +1,17 @@
+<% link= 'http://beta.whatsupraleigh.com/refer/'+ params[:id] %>
+
+<div id="success">
+			<p>Share this link with 3 people to get an invite faster:</p>
+
+            <a href="http://www.facebook.com/sharer.php?u=<%= link  %>&t=What's Up Raleigh" target="blank" ><img src="/images/fb_share.png" id="facebook_button" width="122" height="42" alt="Facebook" /></a>
+
+             <a href="http://twitter.com/home?status=What's Up Raleigh is coming! Get Your Invite Now @raleighapp: <%= link  %>" target="blank" ><img src="/images/twitter_share.png" id="twitter_button" width="122" height="42" alt="Twitter" /></a>
+
+            <p class="large_orange">OR</p>
+
+            <p>Share this link with your friends, the more who sign up, the faster you'll get an invite when the App is ready:</p>
+          <input name="" id="share_url" type="text" value="<%= link %>" />
+		</div>
+
+
+

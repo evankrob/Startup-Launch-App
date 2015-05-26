@@ -1,0 +1,16 @@
+<%= form_tag :action=>'login' %>
+
+<table>
+<tr>
+<td><p>User name:</p></td>
+<td><%= text_field("userform", "username",:size=>"20" ) %></td>
+</tr>
+<tr>
+<td><p>Password:</p></td>
+<td><%= password_field("userform", "password",:size=>"20" )%></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value=" Login " id="login_button"/></td>
+</tr>
+</table> 
